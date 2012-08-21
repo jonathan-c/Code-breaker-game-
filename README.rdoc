@@ -1,7 +1,13 @@
+This project was created using the Pragmatic Programmer's RSpec Book. This game was developed using BDD with the use of Ruby, Cucumber, and RSpec.
+
 == Code Breaker Game
 
-The code-breaker submits a guess of four numbers. The game marks the guess with + and - signs.
+Codebreaker is a logic game in which a code-breaker tries to break a secret code created by a code-maker. The code-maker creates a secret code of four numbers between 1 and 6.
+
+In each turn, the code-breaker submits a guess of four numbers (again 1 to 6). The game marks the guess with + and - signs.
 
 For each number in the guess that matches the number and position of a number in the secret code, the mark includes one + sign. For each number in the guess that matches the number but not the position of a number in the secret code, the mark includes one - sign.
+
+For example, given a secret code of 1234, a guess with 4256 would earn a +-. The + is for the 2 in the second position in the guess, which matches the 2 in the secret code in both number and position: an exact match. The - is for the 4 in the first position in the guess, which matches the 4 in the code but not in the same position: a number match. 
 
 Each position in the secret code can only be matched once. For example, a guess of 1134 against a secret code of 1234 would get three plus signs: one for each of the exact matches in the first, third, and fourth positions. The number match in the second position would be ignored.
